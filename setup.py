@@ -69,7 +69,7 @@ class Build(build_ext):
 torch_spec = importlib.util.find_spec("torch")
 tf_spec = importlib.util.find_spec("tensorflow")
 packages = []
-build_with_cuda = False
+build_with_cuda = True # (False) Change for docker
 if torch_spec is not None:
     packages.append('pydiffvg')
     import torch
